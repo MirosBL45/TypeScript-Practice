@@ -46,3 +46,52 @@ var Direction2;
 })(Direction2 || (Direction2 = {}));
 ;
 console.log(Direction2.Up);
+const user = {
+    id: 1,
+    name: 'Mickey',
+};
+// Type Assertion
+let cid = 1;
+// let customerId = <number>cid
+let customerId = cid;
+// Functions
+function addNum(x, y) {
+    return x + y;
+}
+// Void
+function log(message) {
+    console.log(message);
+}
+const user1 = {
+    id: 1,
+    name: 'Pajalone',
+};
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+// Classes
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+const brad = new Person(1, 'Mikcey Coding');
+const mike = new Person(2, 'Pajalone Mikic');
+// Subclasses
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, 'Sofi', 'Developer');
+// Generics
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(['brad', 'John', 'Jill']);
+numArray.push(1);
